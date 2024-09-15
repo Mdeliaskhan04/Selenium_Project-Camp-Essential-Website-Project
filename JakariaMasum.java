@@ -18,6 +18,21 @@ public class JakariaMasum {
         driver.get("https://camp-essential.netlify.app/");
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,3500)","");
+        driver.navigate().refresh();
+
+        String actualPageTitle= driver.getTitle();
+        System.out.println(actualPageTitle);
+        String expectedPageTitle="Camp Essential";
+        System.out.println(expectedPageTitle);
+
+        if(actualPageTitle.contentEquals(expectedPageTitle))
+        {
+            System.out.println("Passed");
+        }
+        else
+        {
+            System.out.println("Failed");
+        }
 
     }
 }
