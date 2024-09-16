@@ -28,11 +28,12 @@ public class FAQSection {
 
         WebElement header3=driver.findElement(By.xpath("//h3[text()='Can I return or exchange an item?']"));
         header3.click();
-        Thread.sleep(1500);
-        header3.click();
 
+        WebElement header4=driver.findElement(By.xpath("//h3[text()='Do you offer discounts for bulk purchases?']"));
+        header4.click();
 
-
+        WebElement header5=driver.findElement(By.xpath("//h3[text()='How can I track my order?']"));
+        header5.click();
 
     }
 }
